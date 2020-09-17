@@ -1,0 +1,162 @@
+{
+    "info": {
+        "name": "http-client",
+        "version": "1.0.0",
+        "category": "net",
+        "keywords": ["http", "builtin"],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "engines": ">=1.0.2",
+        "titles": {
+            "en": "HTTP Client",
+            "ko": "HTTP 클라이언트"
+        },
+        "descriptions": {
+            "en": "",
+            "ko": ""
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "controls": {
+        "input": "input_body",
+        "output": ["response_headers", "response_body"]
+    },
+    "props": [
+        {
+            "rule": "read_and_write",
+            "name": "enable_ssl",
+            "default_value": false,
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Enable SSL",
+                "ko": "SSL 사용"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "url",
+            "default_value": "",
+            "type": "str",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "URL",
+                "ko": "URL"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "port",
+            "default_value": 80,
+            "type": "int",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Port",
+                "ko": "Port"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "timeout",
+            "default_value": 10,
+            "type": "int",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Timeout(sec)",
+                "ko": "대기시간(초)"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "url_path",
+            "default_value": "",
+            "type": "str",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Path of URI",
+                "ko": "URI의 Path"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "method",
+            "default_value": "GET",
+            "type": "str",
+            "required": true,
+            "valid": {
+                "list": "GET;HEAD;POST;PUT;DELETE;CONNECT;OPTIONS;TRACE;PATCH"
+            },
+            "title": {
+                "en": "HTTP Method",
+                "ko": "HTTP 메소드"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "headers",
+            "default_value": "",
+            "type": "str",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "HTTP Headers",
+                "ko": "HTTP 헤더"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "headers",
+            "default_value": "text",
+            "type": "str",
+            "required": true,
+            "valid": {
+                "list": "text;binary"
+            },
+            "title": {
+                "en": "Type of Body",
+                "ko": "Body 종류"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        }
+    ]
+}
